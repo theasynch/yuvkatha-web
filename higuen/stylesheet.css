@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Higuen';
+    src: url('Higuen-Regular.eot');
+    src: local('Higuen Regular'), local('Higuen-Regular'),
+        url('Higuen-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Higuen-Regular.woff2') format('woff2'),
+        url('Higuen-Regular.woff') format('woff'),
+        url('Higuen-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

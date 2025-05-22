@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Higuen;
+    font-family: "Higuen";
     src: url("higuen/Higuen-Regular.woff2") format("woff2");
 }
 
@@ -39,11 +39,27 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.5);
+    border-radius: 0.2em;
+}
+
+
 body {
-    margin: 0 4vw;
     background-color: #ededed;
 }
+
 .nav-bar {
+    padding: 0 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,9 +90,9 @@ body {
 .links a li {
     font-family: "Geist Regular";
     font-size: 2vh;
-    
-    color: #3b2b21;
+    color: #3b2b21; 
 }
+
 
 .links a:hover{
     opacity: 1;
@@ -87,7 +103,6 @@ body {
     font-family: "Higuen", serif;
     font-weight: 200;
     font-size: 25vh;
-    padding-bottom: 10vh;
     color: #3b2b21;
 }
 
@@ -100,11 +115,17 @@ body {
 }
 
 .main-text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    gap: 10vh;
+    position: static;
+}
+
+.landing-interface{
+    height: 150vh;
 }
 
 .background{
@@ -112,16 +133,17 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -10;
+    height: 200%;
     opacity: 0.2;
+    z-index: -1;
     overflow: hidden;
+
 }
 
 img#mandala1{
     max-width: 200vh;
     position: absolute;
-    top: -50%;
+    top: -25%;
     left: -50%;
     animation: rotate1 20s linear infinite;
 }
@@ -138,7 +160,7 @@ img#mandala1{
 img#mandala2 {
     max-width: 200vh;
     position: absolute;
-    top: -50%;
+    top: -25%;
     right: -50%;
     animation: rotate2 20s linear infinite;
 }
@@ -152,3 +174,131 @@ img#mandala2 {
         transform: rotate(360deg);
     }
 }
+
+
+.introduction{
+    display: flex;
+}
+
+.introduction .vission-mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 0 10vw;
+}
+
+.introduction .vission-mission h1{
+    font-family: "Higuen", serif;
+    color: #3b2b21;
+    font-size: 10vh;
+    font-weight: 200;
+}
+
+.introduction .vission-mission p{
+    font-family: "Geist Regular";
+    color: #3b2b21;
+    font-size: 3vh;
+    text-align: left;
+    line-height: 3vh;
+}
+
+.introduction .intro-text h1{
+    font-family: "Geist ExtraLight";
+    color: #3b2b21;
+    font-size: 5vh;
+    text-align: right;
+    line-height: 4.5vh;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+}
+
+footer .main-footer{
+   background-color: #3b2b21;
+   display: flex;
+   justify-content: space-between;
+   top: 103vh;
+   padding: 5vh 5vh;
+   align-items: center; 
+
+}
+
+footer .main-footer .footer-logo{
+    position: relative;
+    align-items: center;
+}
+
+footer .main-footer .footer-logo h1#footer-logo-text {
+    font-family: "Higuen", serif;
+    font-weight: 200;
+    font-size: 12vh;
+    color: #ededed;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+
+footer .main-footer .footer-logo img#footer-img{
+    max-width: 25vw;
+    position: relative;
+    opacity: 0.5;
+}
+
+footer .main-footer .footer-links{
+    display: grid;
+    grid-template-columns: 25vw 18vw;
+    grid-template-rows: 20vh 20vh;
+    width: 50vw;
+
+}
+
+footer .main-footer .footer-links ul{
+    list-style: none;
+    padding: 0;
+}
+footer .main-footer .footer-links ul a{
+    text-decoration: none;
+    
+}
+footer .main-footer .footer-links ul li{
+    transition: all 0.3s ease-out;
+    font-family: "Geist Regular";
+    font-size: 3vh;
+    color: #ededed;
+    opacity: 0.5;
+
+}
+
+footer .main-footer .footer-links ul li:hover{
+    opacity: 1;
+}
+
+footer .main-footer .footer-links .social-links{
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+}
+
+footer .footer-text{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #3b2b21;
+}
+
+footer .footer-text h1#footer-text{
+    font-family: "Geist ExtraLight";
+    font-size: 3vh;
+    color: #ededed;
+    padding: 2vh 0;
+}
+
+
